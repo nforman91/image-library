@@ -1,0 +1,24 @@
+.single-card {
+  border: 1px solid black;
+  height: 22em;
+  width: 20em;
+  border-radius: 20%;
+  margin: 2em;
+  box-shadow: 0.5em 0.5em 1em black;
+}
+
+.single-card:hover {
+  box-shadow: 0.5em 0.5em 3em black;
+  margin-top: -0.2em;
+}
+
+.picsum-image {
+  margin: 3.6em;
+  border-radius: 99%;
+  outline: 10px solid lightblue;
+  outline-offset: 1em;
+}
+
+.card-title {
+  margin: 0 0 2em 2.4em;
+}
