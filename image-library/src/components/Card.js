@@ -1,11 +1,15 @@
 import React from 'react';
 import './Card.css';
+import logos from '../logos/Logos';
 
-const Card = () => {
+const Card = (props) => {
+    const { images } = props
+
     return (
         <div className='single-card'>
-            <img className='picsum-image' src='https://picsum.photos/200' alt='random thing'/>
-            <h2 className='card-title'>Example Card Title</h2>
+            <figure className='circle'></figure>
+            <img className='team-logo' src={logos[1].url} alt='team-logo'/>
+            <h2 className='card-title'>{images[1].name}</h2>
         </div>
     )
 }
