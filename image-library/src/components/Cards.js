@@ -1,11 +1,12 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { getImages, fetchFail } from '../actions';
+import logos from '../logos/Logos';
 import Card from './Card';
 import './Cards.css';
 
 const Cards = (props) => {
-    const { images, isFetching, error, getImages } = props;
+    const { teams, isFetching, error, getImages } = props;
 
     useEffect(() => {
         getImages();
@@ -21,20 +22,47 @@ const Cards = (props) => {
 
     return (
         <div className='card-container'>
-            <Card images={images}/>
-            <Card images={images}/>
-            {/* {
-                images.map(image => {
-                    <Card key={image.id} image={image}/>
+            {
+                logos.map(card => {
+                    return(
+                        <div key={card.id} className='single-card'>
+                            <figure className='circle'></figure>
+                            <img className='team-logo' src={card.url} alt='team-logo'/>
+                            <h2 className='card-title'>{card.team_name}</h2>
+                        </div>
+                    )
                 })
-            } */}
+                
+            }
         </div>
+        // <div className='card-container'>
+            // {/* <Card teams={teams}/>
+            // <Card teams={teams}/> */}
+
+            // {
+            //     logos.map(logo => {
+            //         return <Card key={logo.id} logo={logo}/>
+            //     })
+            // }
+            
+            // {/* {
+            //     teams.map(team => {
+            //         return <Card key={team.id} team={team}/>
+            //     })
+            // } */}
+            
+            // {/* {
+            //     images.map(image => {
+            //         <Card key={image.id} image={image}/>
+            //     })
+            // } */}
+        // </div>
     );
 };
 
 const mapStateToProps = (state) => {
     return {
-        images: state.images,
+        teams: state.teams,
         isFetching: state.isFetching,
         error: state.error
     };

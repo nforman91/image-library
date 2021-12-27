@@ -10,8 +10,8 @@ export const getImages = () => {
 
         axios.get('https://statsapi.web.nhl.com/api/v1/teams/')
         .then(res => {
-            const images = res.data.teams
-            dispatch(fetchSuccess(images))
+            const teams = res.data.teams
+            dispatch(fetchSuccess(teams))
         })
         .catch(err => {
             dispatch(fetchFail('Was not able to load image!'))

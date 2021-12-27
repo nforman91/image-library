@@ -1,6 +1,9 @@
 .card-container {
   border: 1px solid black;
-  height: 100em;
+  height: 250em;
   width: 100em;
   margin: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }

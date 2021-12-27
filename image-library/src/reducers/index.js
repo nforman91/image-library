@@ -1,7 +1,7 @@
 import { FETCH_START, FETCH_SUCCESS, FETCH_FAIL } from "../actions";
 
 const initialState = {
-    images: {
+    teams: {
         name: '',
         conference: {
             name: '',
