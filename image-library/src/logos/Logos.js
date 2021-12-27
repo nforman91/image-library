@@ -62,7 +62,7 @@ let logos = [
     {
         id: 13,
         team_name: 'Tampa Bay Lightning',
-        url: 'https://cms.nhl.bamgrid.com/images/assets/binary/299109716/binary-file/file.svg'
+        url: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Tampa_Bay_Lightning_Logo_2011.svg/1200px-Tampa_Bay_Lightning_Logo_2011.svg.png'
     },
     {
         id: 14,

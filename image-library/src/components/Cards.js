@@ -20,12 +20,16 @@ const Cards = (props) => {
         return <h2>Fetching images...</h2>;
     }
 
+    const showCard = () => {
+        
+    }
+
     return (
         <div className='card-container'>
             {
                 logos.map(card => {
                     return(
-                        <div key={card.id} className='single-card'>
+                        <div key={card.id} className='single-card' onClick={showCard}>
                             <figure className='circle'></figure>
                             <img className='team-logo' src={card.url} alt='team-logo'/>
                             <h2 className='card-title'>{card.team_name}</h2>
