@@ -1,7 +1,8 @@
-.info-card:hover {
+.info-display {
   height: 10em;
-  width: 10em;
+  width: 15em;
   border: 1px solid black;
+  background-color: white;
   display: flex;
   justify-content: flex-start;
 }
