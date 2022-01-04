@@ -1,4 +1,4 @@
-let logos = [
+const logos = [
     {
         id: 1,
         team_name: 'New Jersey Devils',

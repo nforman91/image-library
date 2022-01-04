@@ -7,7 +7,6 @@ function App() {
   return (
     <div className='card-library'>
       <Title/>
-      <Cards/>
     </div>
   );
 }
