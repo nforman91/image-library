@@ -45,7 +45,7 @@
 .team-logo {
   height: 7.5em;
   width: 6.5em;
-  margin: 1.5em 0 0.5em 1.75em;
+  margin: 1.3em 0 0.5em 1.75em;
   outline-offset: 0.63em;
 }
 
@@ -55,7 +55,6 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  margin-bottom: 2.5em;
 }
 
 #modal {

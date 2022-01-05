@@ -1,3 +1,19 @@
 .sort-button {
+  height: 3em;
+  width: 10em;
+  background-color: white;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+}
+
+#dropdown-content {
   height: 2em;
+  background-color: white;
+  padding: 1em 1em;
+  text-decoration: none;
+}
+
+.show-sorting {
+  display: none;
 }

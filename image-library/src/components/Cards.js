@@ -8,12 +8,8 @@ class Cards extends React.Component {
         teamCards: logos
     }
 
-    showInfo = () => {
-        document.getElementById('modal').classList.toggle('show-info');
-    }
-
     showSortBy = () => {
-        document.getElementById('dropdown-content').classList.toggle('show-info');
+        document.getElementById('dropdown-content').classList.toggle('show-sorting');
     }
 
     sortByTeamName = (e) => {
@@ -31,7 +27,7 @@ class Cards extends React.Component {
                 }
             })
         })
-        document.getElementById('dropdown-content').classList.toggle('show-info');
+        document.getElementById('dropdown-content').classList.toggle('show-sorting');
     }
 
     sortByDivision = (e) => {
@@ -49,17 +45,19 @@ class Cards extends React.Component {
                 }
             })
         })
-        document.getElementById('dropdown-content').classList.toggle('show-info');
+        document.getElementById('dropdown-content').classList.toggle('show-sorting');
     }
 
     render(){
         return (
             <div>
-                <button className='sort-button' onClick={this.showSortBy}>Sort By</button>
-                    <div id='dropdown-content' className='show-info'>
+                <button className='sort-button' onClick={this.showSortBy}>Sort By
+                    <div id='dropdown-content' className='show-sorting'>
                         <a href='#teamName' onClick={this.sortByTeamName}>Team Name</a>
+                        <br/>
                         <a href='#division' onClick={this.sortByDivision}>Division</a>
                     </div>
+                </button>
                 <Info teamCards={this.state.teamCards}/>
             </div>
         );
