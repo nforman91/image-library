@@ -1,21 +1,34 @@
-import React from 'react';
-import logos from '../logos/Logos';
+import React, { useState, useEffect } from 'react';
+// import logos from '../logos/Logos';
+import axios from 'axios';
 import Info from './Info';
+// import teams from '../actions';
 import './Cards.css';
 
-class Cards extends React.Component {
-    state = {
-        teamCards: logos
-    }
+const Cards = () => {
+    const [teamCards, setTeamCards] = useState(null)
+    console.log('TEAMCARDS: ', teamCards)
 
-    showSortBy = () => {
+    useEffect(() => {
+        axios.get('https://statsapi.web.nhl.com/api/v1/teams/')
+        .then(res => {
+            const teams = res.data.teams
+            setTeamCards(teams)
+            console.log(typeof teams)
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }, [])
+
+    const showSortBy = () => {
         document.getElementById('dropdown-content').classList.toggle('show-sorting');
     }
 
-    sortByTeamName = (e) => {
+    const sortByTeamName = (e) => {
         e.preventDefault();
         this.setState({
-            teamCards: logos.sort(function(a,b) {
+            teamCards: teamCards.sort(function(a,b) {
                 let aTeamName = a.team_name.toLowerCase();
                 let bTeamName = b.team_name.toLowerCase();
                 if(aTeamName > bTeamName){
@@ -30,10 +43,10 @@ class Cards extends React.Component {
         document.getElementById('dropdown-content').classList.toggle('show-sorting');
     }
 
-    sortByDivision = (e) => {
+    const sortByDivision = (e) => {
         e.preventDefault();
         this.setState({
-            teamCards: logos.sort(function(a,b) {
+            teamCards: teamCards.sort(function(a,b) {
                 let aDivision = a.division.toLowerCase();
                 let bDivision = b.division.toLowerCase();
                 if(aDivision > bDivision){
@@ -48,20 +61,20 @@ class Cards extends React.Component {
         document.getElementById('dropdown-content').classList.toggle('show-sorting');
     }
 
-    render(){
-        return (
-            <div>
-                <button className='sort-button' onClick={this.showSortBy}>Sort By
-                    <div id='dropdown-content' className='show-sorting'>
-                        <a href='#teamName' onClick={this.sortByTeamName}>Team Name</a>
-                        <br/>
-                        <a href='#division' onClick={this.sortByDivision}>Division</a>
-                    </div>
-                </button>
-                <Info teamCards={this.state.teamCards}/>
-            </div>
-        );
-    }
+    return (
+        <div>
+            <button className='sort-button' onClick={showSortBy}>Sort By
+                <div id='dropdown-content' className='dd-content show-sorting'>
+                    <a href='#teamName' onClick={sortByTeamName}>Team Name</a>
+                    <br/>
+                    <a href='#division' onClick={sortByDivision}>Division</a>
+                </div>
+            </button>
+            {teamCards && 
+                <Info teamCards={teamCards}/>
+            }
+        </div>
+    );
 };
 
 export default Cards;

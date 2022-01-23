@@ -25,6 +25,7 @@
   margin: 1em;
   box-shadow: 0.25em 0.25em 0.5em black;
   background-color: white;
+  cursor: pointer;
 }
 
 .single-card:hover {
@@ -51,10 +52,10 @@
 
 .card-title {
   font-size: small;
-  position: relative;
   text-align: center;
   display: flex;
   justify-content: center;
+  margin-top: 8.5em;
 }
 
 #modal {

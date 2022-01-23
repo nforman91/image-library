@@ -1,0 +1,15 @@
+#modal {
+  border: 1px solid black;
+  background-color: white;
+  height: 15em;
+  width: 15em;
+  position: absolute;
+  top: 10em;
+  left: 15em;
+  padding: 2em;
+  border-radius: 10%;
+}
+
+.show-info {
+  display: none;
+}
