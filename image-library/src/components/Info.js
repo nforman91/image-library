@@ -5,12 +5,7 @@ import Modal from './Modal';
 
 const Info = (props) => {
     const [team, setTeam] = useState();
-    const [modal, setModal] = useState(false)
-    const { teamCards } = props;
-
-    const showInfo = (selected) => {
-        document.getElementById('modal').classList.toggle('show-info');
-    }
+    const [modal, setModal] = useState(false);
 
     const showTeamCard = (logo) => {
         return(
@@ -28,6 +23,7 @@ const Info = (props) => {
 
     return(
         <div className='card-container'>
+            {modal && <Modal className="team-modal" team={team} setModal={setModal}/>}
             <div className='logo-container'>
                 {
                     logos.map(logo => {
@@ -37,7 +33,6 @@ const Info = (props) => {
                     })
                 }
             </div>
-            {modal && <Modal team={team} setModal={setModal}/>}
         </div>
     )
 }

@@ -1,21 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import React, { useState } from 'react';
 import Info from './Info';
+import logos from '../logos/Logos';
 import './Cards.css';
 
 const Cards = () => {
-    const [teamCards, setTeamCards] = useState(null);
-
-    useEffect(() => {
-        axios.get('https://statsapi.web.nhl.com/api/v1/teams/')
-        .then(res => {
-            const teams = res.data.teams
-            setTeamCards(teams)
-        })
-        .catch(err => {
-            console.log(err)
-        })
-    }, [])
+    const [teamCards, setTeamCards] = useState(logos);
 
     const showSortBy = () => {
         document.getElementById('dropdown-content').classList.toggle('show-sorting');
@@ -23,10 +12,10 @@ const Cards = () => {
 
     const sortByTeamName = (e) => {
         e.preventDefault();
-        this.setState({
-            teamCards: teamCards.sort(function(a,b) {
-                let aTeamName = a.team_name.toLowerCase();
-                let bTeamName = b.team_name.toLowerCase();
+        setTeamCards(
+            logos.sort(function(a,b) {
+                let aTeamName = a.name.toLowerCase();
+                let bTeamName = b.name.toLowerCase();
                 if(aTeamName > bTeamName){
                     return 1;
                 } else if(aTeamName < bTeamName){
@@ -35,16 +24,16 @@ const Cards = () => {
                     return 0;
                 }
             })
-        })
+        )
         document.getElementById('dropdown-content').classList.toggle('show-sorting');
     }
 
     const sortByDivision = (e) => {
         e.preventDefault();
-        this.setState({
-            teamCards: teamCards.sort(function(a,b) {
-                let aDivision = a.division.toLowerCase();
-                let bDivision = b.division.toLowerCase();
+        setTeamCards(
+            logos.sort(function(a,b) {
+                let aDivision = a.division.name.toLowerCase();
+                let bDivision = b.division.name.toLowerCase();
                 if(aDivision > bDivision){
                     return 1;
                 } else if(aDivision < bDivision){
@@ -53,7 +42,7 @@ const Cards = () => {
                     return 0;
                 }
             })
-        })
+        )
         document.getElementById('dropdown-content').classList.toggle('show-sorting');
     }
 

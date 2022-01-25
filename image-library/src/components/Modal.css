@@ -3,9 +3,9 @@
   background-color: white;
   height: 15em;
   width: 15em;
-  position: relative;
-  top: 10em;
-  left: 15em;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   padding: 2em;
   border-radius: 10%;
 }
