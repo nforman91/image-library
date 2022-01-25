@@ -15,17 +15,7 @@
   flex-wrap: wrap;
   align-content: flex-start;
   background-color: silver;
-}
-
-.single-card {
-  border: 1px solid black;
-  height: 11em;
-  width: 10em;
-  border-radius: 20%;
-  margin: 1em;
-  box-shadow: 0.25em 0.25em 0.5em black;
-  background-color: white;
-  cursor: pointer;
+  position: relative;
 }
 
 .single-card:hover {
@@ -46,7 +36,7 @@
 .team-logo {
   height: 7.5em;
   width: 6.5em;
-  margin: 1.3em 0 0.5em 1.75em;
+  margin: 1.4em 3.9em 0.5em 1.75em;
   outline-offset: 0.63em;
 }
 
@@ -55,21 +45,28 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  margin-top: 8.5em;
+  margin-top: 0em;
+  margin-left: 1em;
 }
 
-#modal {
+.logo-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1em 0 0 1em;
+}
+
+.single-logo-container {
   border: 1px solid black;
+  height: 11em;
+  width: 10em;
+  border-radius: 20%;
+  margin: 0 2.5em 2em 0;
+  box-shadow: 0.25em 0.25em 0.5em black;
   background-color: white;
-  height: 15em;
-  width: 15em;
-  position: absolute;
-  top: 10em;
-  left: 15em;
-  padding: 2em;
-  border-radius: 10%;
+  cursor: pointer;
 }
 
-.show-info {
-  display: none;
+.team-name {
+  display: flex;
+  justify-content: center;
 }

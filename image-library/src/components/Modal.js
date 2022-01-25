@@ -1,35 +1,37 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Modal.css';
+import axios from 'axios';
 
 const Modal = (props) => {
-    // constructor(props){
-    //     super(props);
+    const {team} = props
+    const [selectedTeamCard, setselectedTeamCard] = useState(null);
 
-    //     this.state = {
-    //         selected: this.card,
-    //         // showInfo: this.showInfo
-    //         // showModal: this.showModal
-    //     }
-    // }
-    const { selected } = props;
-
-    // showInfo = (selected) => {
-    //     console.log('SELECTED', selected.team_name)
-    //     // document.getElementById('modal').classList.toggle('show-info');
-    // }
-
-    // details = this.props.selected.filter(detailed => {return this.detailed.id === selected.id})
-
+    useEffect(() => {
+        axios.get(`https://statsapi.web.nhl.com/api/v1/teams/${team.id}`)
+        .then(res => {
+            setselectedTeamCard(res.data.teams[0])
+        })
+        .catch(err => {
+            console.log(err)
+        })
+    }, [])
+    
     return(
-        
-        <div 
-            id='modal' 
-            className='show-info'
-        >
-            <h4>Team Name: {selected.team_name}</h4>
-            <h4>Conference: {selected.conference}</h4>
-            <h4>Division: {selected.division}</h4>
-        </div>
+        <>
+        {selectedTeamCard && 
+            <div id='modal'>
+                <div 
+                    className="exit" 
+                    onClick={() => props.setModal(false)}
+                >X</div>
+                <h4>Team Name: {selectedTeamCard.name}</h4>
+                <h4>Conference: {selectedTeamCard.conference.name}</h4>
+                <h4>Division: {selectedTeamCard.division.name}</h4>
+                <h4>City: {selectedTeamCard.venue.city}</h4>
+                <h4>Stadium: {selectedTeamCard.venue.name}</h4>
+            </div>
+    }
+    </>
     )
 }
 

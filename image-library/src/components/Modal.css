@@ -3,13 +3,16 @@
   background-color: white;
   height: 15em;
   width: 15em;
-  position: absolute;
+  position: relative;
   top: 10em;
   left: 15em;
   padding: 2em;
   border-radius: 10%;
 }
 
-.show-info {
-  display: none;
+.exit {
+  display: flex;
+  justify-content: flex-end;
+  margin-left: 15em;
+  cursor: pointer;
 }

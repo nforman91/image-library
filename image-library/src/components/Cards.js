@@ -1,20 +1,16 @@
 import React, { useState, useEffect } from 'react';
-// import logos from '../logos/Logos';
 import axios from 'axios';
 import Info from './Info';
-// import teams from '../actions';
 import './Cards.css';
 
 const Cards = () => {
-    const [teamCards, setTeamCards] = useState(null)
-    console.log('TEAMCARDS: ', teamCards)
+    const [teamCards, setTeamCards] = useState(null);
 
     useEffect(() => {
         axios.get('https://statsapi.web.nhl.com/api/v1/teams/')
         .then(res => {
             const teams = res.data.teams
             setTeamCards(teams)
-            console.log(typeof teams)
         })
         .catch(err => {
             console.log(err)
