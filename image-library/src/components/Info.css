@@ -1,3 +1,8 @@
+.hockey-app {
+  position: relative;
+  z-index: 1;
+}
+
 .card-container {
   height: 105em;
   width: 53em;
@@ -6,8 +11,6 @@
   flex-wrap: wrap;
   align-content: flex-start;
   background-color: silver;
-  position: relative;
-  z-index: 1;
 }
 
 .circle {
@@ -55,6 +58,8 @@
 }
 
 .team-modal {
-  position: relative;
+  position: fixed;
+  top: 10em;
+  left: 30%;
   z-index: 2;
 }

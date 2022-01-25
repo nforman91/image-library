@@ -22,16 +22,20 @@ const Info = (props) => {
     }
 
     return(
-        <div className='card-container'>
-            {modal && <Modal className="team-modal" team={team} setModal={setModal}/>}
-            <div className='logo-container'>
-                {
-                    logos.map(logo => {
-                        return(
-                            showTeamCard(logo)
-                        )
-                    })
-                }
+        <div className='hockey-app'>
+            <div className='card-container'>
+                <div className="team-modal">
+                    {modal && <Modal team={team} setModal={setModal}/>}
+                </div>
+                <div className='logo-container'>
+                    {
+                        logos.map(logo => {
+                            return(
+                                showTeamCard(logo)
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
     )
