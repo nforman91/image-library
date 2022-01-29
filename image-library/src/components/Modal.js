@@ -24,11 +24,13 @@ const Modal = (props) => {
                     className="exit" 
                     onClick={() => props.setModal(false)}
                 >X</div>
-                <h4>Team Name: {selectedTeamCard.name}</h4><br/>
-                <h4>Conference: {selectedTeamCard.conference.name}</h4><br/>
-                <h4>Division: {selectedTeamCard.division.name}</h4><br/>
-                <h4>City: {selectedTeamCard.venue.city}</h4><br/>
-                <h4>Stadium: {selectedTeamCard.venue.name}</h4>
+                <div className="modal-content">
+                    <h4 style={{fontWeight: 'bold'}}>Team Name: {selectedTeamCard.name}</h4><br/>
+                    <h4>Conference: {selectedTeamCard.conference.name}</h4><br/>
+                    <h4>Division: {selectedTeamCard.division.name}</h4><br/>
+                    <h4>City: {selectedTeamCard.venue.city}</h4><br/>
+                    <h4>Stadium: {selectedTeamCard.venue.name}</h4>
+                </div>
             </div>
     }
     </>

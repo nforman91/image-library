@@ -1,7 +1,7 @@
 .title-container {
   background-image: linear-gradient(to right, black, white);
   width: 100%;
-  height: 5em;
+  height: 6em;
 }
 
 .page-title {
@@ -13,6 +13,6 @@
 }
 
 .nhl-shield {
-  margin: 1em;
+  margin: 0.6em 1em 1em 1.5em;
   width: 3em;
 }
