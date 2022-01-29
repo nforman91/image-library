@@ -68,6 +68,7 @@ const Info = (props) => {
             <div onClick={() => {
                 setTeam(logo)
                 setModal(!modal)
+                setSortDrop(false)
             }}
                 className="single-logo-container" key={logo.id}>
                 <div className='circle'></div>
@@ -84,13 +85,9 @@ const Info = (props) => {
                 {sortDrop &&
                 <div className='dd-content'>
                     <div onClick={sortByTeamName}>Team Name</div>
-                    <br/>
                     <div className="sort-line"></div>
-                    <br/>
                     <div onClick={sortByConference}>Conference</div>
-                    <br/>
                     <div className="sort-line"></div>
-                    <br/>
                     <div onClick={sortByDivision}>Division</div>
                 </div>
                 }
