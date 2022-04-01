@@ -34,7 +34,7 @@ const Modal = (props) => {
                     <h4>Division: {selectedTeamCard.division.name}</h4><br/>
                     <h4>City: {selectedTeamCard.venue.city}</h4><br/>
                     <h4>Stadium: {selectedTeamCard.venue.name}</h4><br/>
-                    <h4>Official Site URL: {selectedTeamCard.officialSiteUrl}</h4>
+                    <a href={selectedTeamCard.officialSiteUrl} target="_blank">Official Site URL</a>
                     {/* <h4 onClick={() => setStar(!star)}>Favorite?</h4>
                     {star && <Star star={star} setStar={setStar}/>} */}
                     {/* <h6>{star}</h6>
