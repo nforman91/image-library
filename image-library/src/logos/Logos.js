@@ -158,7 +158,7 @@ const logos = [
         team_name: 'Anaheim Ducks',
         conference: 'Western',
         division: 'Pacific',
-        url: 'https://cms.nhl.bamgrid.com/images/assets/binary/318845684/binary-file/file.svg'
+        url: 'https://cms.nhl.bamgrid.com/images/assets/binary/299423002/binary-file/file.svg'
     },
     {
         id: 25,
