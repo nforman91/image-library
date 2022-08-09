@@ -94,7 +94,7 @@
 .team-name {
   display: flex;
   justify-content: center;
-  font-weight: bold;
+  margin-bottom: 0.25em;
 }
 
 .team-modal {
