@@ -73,7 +73,7 @@ const Info = (props) => {
                 className="single-logo-container" key={logo.id}>
                 <div className='circle'></div>
                 <img className="team-logo" src={logo.url} alt="team-logo"/>
-            <div className="team-name">{logo.team_name}</div>
+            <h4 className="team-name">{logo.team_name}</h4>
             </div>
         )
     }
