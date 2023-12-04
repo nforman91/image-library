@@ -25,14 +25,14 @@ const logos = [
         team_name: 'Philadelphia Flyers',
         conference: 'Eastern',
         division: 'Metropolitan',
-        url: 'https://www-league.nhlstatic.com/images/logos/teams-current-primary-light/4.svg'
+        url: 'https://assets.nhle.com/logos/nhl/svg/PHI_dark.svg'
     },
     {
         id: 5,
         team_name: 'Pittsburgh Penguins',
         conference: 'Eastern',
         division: 'Metropolitan',
-        url: 'https://www-league.nhlstatic.com/images/logos/teams-current-primary-light/5.svg'
+        url: 'https://assets.nhle.com/logos/nhl/svg/PIT_dark.svg'
     },
     {
         id: 6,
@@ -67,14 +67,14 @@ const logos = [
         team_name: 'Toronto Maple Leafs',
         conference: 'Eastern',
         division: 'Atlantic',
-        url: 'https://www-league.nhlstatic.com/images/logos/teams-current-primary-light/10.svg'
+        url: 'https://en.wikipedia.org/wiki/Toronto_Maple_Leafs#/media/File:Toronto_Maple_Leafs_2016_logo.svg'
     },
     {
         id: 12,
         team_name: 'Carolina Hurricanes',
         conference: 'Easten',
         division: 'Metropolitan',
-        url: 'https://www-league.nhlstatic.com/nhl.com/builds/site-core/1b0537abbccc0707356f2da3f3f794e06472cbf3_1636047209/images/logos/team/current/team-12-dark.svg'
+        url: 'https://assets.nhle.com/logos/nhl/svg/CAR_dark.svg'
     },
     {
         id: 13,
@@ -88,7 +88,7 @@ const logos = [
         team_name: 'Tampa Bay Lightning',
         conference: 'Eastern',
         division: 'Atlantic',
-        url: 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Tampa_Bay_Lightning_Logo_2011.svg/1200px-Tampa_Bay_Lightning_Logo_2011.svg.png'
+        url: 'https://upload.wikimedia.org/wikipedia/commons/3/31/Tampa_Bay_Lightning_2011.svg'
     },
     {
         id: 15,
@@ -109,14 +109,14 @@ const logos = [
         team_name: 'Detroit Red Wings',
         conference: 'Eastern',
         division: 'Atlantic',
-        url: 'https://www-league.nhlstatic.com/images/logos/teams-current-primary-light/17.svg'
+        url: 'https://assets.nhle.com/logos/nhl/svg/DET_dark.svg'
     },
     {
         id: 18,
         team_name: 'Nashville Predators',
         conference: 'Western',
         division: 'Central',
-        url: 'https://www-league.nhlstatic.com/nhl.com/builds/site-core/1b0537abbccc0707356f2da3f3f794e06472cbf3_1636047209/images/logos/team/current/team-18-dark.svg'
+        url: 'https://upload.wikimedia.org/wikipedia/en/thumb/9/9c/Nashville_Predators_Logo_%282011%29.svg/440px-Nashville_Predators_Logo_%282011%29.svg.png'
     },
     {
         id: 19,
@@ -137,7 +137,7 @@ const logos = [
         team_name: 'Colorado Avalanche',
         conference: 'Western',
         division: 'Central',
-        url: 'https://www-league.nhlstatic.com/images/logos/teams-current-primary-dark/21.svg'
+        url: 'https://assets.nhle.com/logos/nhl/svg/COL_dark.svg'
     },
     {
         id: 22,
@@ -186,21 +186,21 @@ const logos = [
         team_name: 'Columbus Blue Jackets',
         conference: 'Eastern',
         division: 'Metropolitan',
-        url: 'https://www-league.nhlstatic.com/images/logos/teams-current-primary-dark/29.svg'
+        url: 'https://assets.nhle.com/logos/nhl/svg/CBJ_dark.svg'
     },
     {
         id: 30,
         team_name: 'Minnesota Wild',
         conference: 'Western',
         division: 'Central',
-        url: 'https://www-league.nhlstatic.com/images/logos/teams-current-primary-light/30.svg'
+        url: 'https://assets.nhle.com/logos/nhl/svg/MIN_dark.svg'
     },
     {
         id: 52,
         team_name: 'Winnipeg Jets',
         conference: 'Western',
         division: 'Central',
-        url: 'https://www-league.nhlstatic.com/nhl.com/builds/site-core/1b0537abbccc0707356f2da3f3f794e06472cbf3_1636047209/images/logos/team/current/team-52-dark.svg'
+        url: 'https://assets.nhle.com/logos/nhl/svg/WPG_dark.svg'
     },
     {
         id: 53,
