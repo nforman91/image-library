@@ -11,7 +11,7 @@ const logos = [
         team_name: 'New York Islanders',
         conference: 'Eastern',
         division: 'Metropolitan',
-        url: 'https://cms.nhl.bamgrid.com/images/assets/binary/316482732/binary-file/file.svg'
+        url: 'https://assets.nhle.com/logos/nhl/svg/NYI_dark.svg'
     },
     {
         id: 3,
