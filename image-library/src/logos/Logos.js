@@ -4,7 +4,7 @@ const logos = [
         team_name: 'New Jersey Devils',
         conference: 'Eastern',
         division: 'Metropolitan',
-        url: 'https://cms.nhl.bamgrid.com/images/assets/binary/301891622/binary-file/file.svg'
+        url: 'https://assets.nhle.com/logos/nhl/svg/NJD_dark.svg'
     },
     {
         id: 2,
